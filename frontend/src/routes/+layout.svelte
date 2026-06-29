@@ -32,7 +32,7 @@
 	<footer class="footer">
 		<p>
 			&copy; 2026 Pushup Posture Detection. Developed for Computer Vision
-			UAS.
+			UAS by Zainal Fata Abdillah.
 		</p>
 	</footer>
 </div>
