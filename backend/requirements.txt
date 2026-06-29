@@ -6,6 +6,5 @@ scikit-learn==1.9.0
 numpy
 python-multipart==0.0.32
 websockets==16.0
-tensorflow==2.21.0
 joblib
 mysql-connector-python
