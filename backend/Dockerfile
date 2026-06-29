@@ -10,6 +10,8 @@ RUN apt-get update && apt-get install -y \
     libxext6 \
     libxrender-dev \
     libxcb1 \
+    libgles2 \
+    libegl1 \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy requirements and install
