@@ -188,4 +188,19 @@
 		animation: spin 1s linear infinite;
 	}
 	@keyframes spin { to { transform: rotate(360deg); } }
+	
+	@media (max-width: 768px) {
+		.page-container { padding: 1rem 0; }
+		.session-card { padding: 1rem; }
+		.session-meta { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+	}
+	
+	@media (max-width: 500px) {
+		.session-stats {
+			flex-wrap: wrap;
+		}
+		.stat-block {
+			min-width: 45%;
+		}
+	}
 </style>

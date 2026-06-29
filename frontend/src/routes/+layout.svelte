@@ -125,4 +125,22 @@
 		border-top: 1px solid var(--surface-border);
 		margin-top: auto;
 	}
+
+	@media (max-width: 768px) {
+		.nav-content {
+			flex-direction: column;
+			gap: 1rem;
+			padding: 1rem;
+		}
+		
+		.nav-links {
+			gap: 1rem;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		
+		.nav-link {
+			font-size: 0.9rem;
+		}
+	}
 </style>

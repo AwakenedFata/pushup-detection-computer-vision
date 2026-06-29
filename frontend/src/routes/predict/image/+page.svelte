@@ -255,8 +255,19 @@
 	}
 
 	@media (max-width: 768px) {
+		.page-container {
+			padding: 1rem 0;
+		}
+
 		.layout-grid {
 			grid-template-columns: 1fr;
+			gap: 1rem;
+		}
+		
+		.upload-section, .results-section {
+			padding: 1rem;
+			min-height: auto;
+			min-height: 350px;
 		}
 	}
 
@@ -294,6 +305,7 @@
 		position: relative;
 		width: 100%;
 		height: 100%;
+		min-height: 250px;
 		display: flex;
 		align-items: center;
 		justify-content: center;

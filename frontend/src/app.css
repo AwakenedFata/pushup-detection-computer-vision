@@ -117,6 +117,17 @@ p {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.25rem; }
 }
 
 .grid {
