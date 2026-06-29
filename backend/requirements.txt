@@ -2,8 +2,7 @@ fastapi==0.138.1
 uvicorn==0.49.0
 mediapipe==0.10.35
 opencv-python-headless==4.13.0.92
-scikit-learn
-numpy
+scikit-learn==1.5.0
 python-multipart==0.0.32
 websockets==16.0
 joblib
