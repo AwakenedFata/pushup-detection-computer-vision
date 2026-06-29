@@ -12,6 +12,7 @@ Endpoints:
 import base64
 import json
 import logging
+import os
 import time
 import uuid
 from datetime import datetime
@@ -47,8 +48,6 @@ app = FastAPI(
     version="1.0.0",
 )
 
-import os
-
 ALLOWED_ORIGINS = os.getenv(
     "ALLOWED_ORIGINS",
     "https://pushup-detection.vercel.app,http://localhost:5173"
@@ -61,6 +60,17 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+from fastapi import Request
+from fastapi.responses import JSONResponse
+
+@app.exception_handler(Exception)
+async def global_exception_handler(request: Request, exc: Exception):
+    logger.exception("Unhandled error: %s", exc)
+    return JSONResponse(
+        status_code=500,
+        content={"detail": str(exc)},
+    )
 
 @app.on_event("startup")
 def _startup():
