@@ -23,11 +23,11 @@ logger = logging.getLogger(__name__)
 import os
 
 _DB_CONFIG = {
-    "host":     os.getenv("MYSQL_HOST", "localhost"),
-    "port":     int(os.getenv("MYSQL_PORT", 3306)),
-    "user":     os.getenv("MYSQL_USER", "root"),
-    "password": os.getenv("MYSQL_PASSWORD", ""),
-    "database": os.getenv("MYSQL_DATABASE", "db_pushUpCv"),
+    "host": os.getenv("MYSQLHOST") or os.getenv("MYSQL_HOST", "localhost"),
+    "port": int(os.getenv("MYSQLPORT") or os.getenv("MYSQL_PORT", 3306)),
+    "user": os.getenv("MYSQLUSER") or os.getenv("MYSQL_USER", "root"),
+    "password": os.getenv("MYSQLPASSWORD") or os.getenv("MYSQL_PASSWORD", ""),
+    "database": os.getenv("MYSQLDATABASE") or os.getenv("MYSQL_DATABASE", "db_pushUpCv"),
 }
 
 _DDL = """
