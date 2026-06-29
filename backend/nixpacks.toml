@@ -1,2 +1,0 @@
-[phases.build]
-cmds = ["...", "pip uninstall -y opencv-contrib-python opencv-python"]
