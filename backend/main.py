@@ -393,8 +393,11 @@ async def realtime_ws(websocket: WebSocket, session_id: str):
 async def api_save_session(body: SaveSessionRequest):
     """Save a completed tracking session to MySQL."""
     try:
-        start = datetime.fromisoformat(body.start_time)
-        end   = datetime.fromisoformat(body.end_time)
+        # Python 3.10 fromisoformat doesn't support 'Z' suffix from JS, replace it
+        start_str = body.start_time.replace("Z", "+00:00")
+        end_str = body.end_time.replace("Z", "+00:00")
+        start = datetime.fromisoformat(start_str)
+        end   = datetime.fromisoformat(end_str)
     except ValueError:
         raise HTTPException(400, "Invalid datetime format. Use ISO-8601.")
 
