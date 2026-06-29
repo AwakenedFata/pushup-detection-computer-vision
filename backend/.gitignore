@@ -1,0 +1,20 @@
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Logs
+*.log
+
+# Models
+# pushup_classifier.pkl and scaler.pkl are needed in production, so we DO NOT ignore them!
+# models/ and features/ should be checked in (or at least the .pkl and .task files)
+features/*.npz
